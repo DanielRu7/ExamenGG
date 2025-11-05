@@ -49,7 +49,7 @@ async function agregar() {
 async function buscar() {
   const nombre = localStorage.getItem("userName"); // <-- ya no JSON.parse
 
-  const res = await fetch("http://10.13.140.119:3000/api/getpago", {
+  const res = await fetch("http://localhost:3000/api/getpago", {
     method: "POST",
     headers: { 
       "Content-Type": "application/json",

@@ -138,7 +138,7 @@ async function logout() {
       headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` }
     });
     Swal.fire({
-      title: "secion cerrada!",
+      title: "sesion cerrada!",
       icon: "success",
       draggable: true
     }).then(()=>{
