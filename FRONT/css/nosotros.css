@@ -1,0 +1,125 @@
+/* --- Reset y Globales --- */
+        :root {
+            --azul-principal: #0056b3; /* Un azul corporativo fuerte */
+            --azul-secundario: #007bff; /* Un azul más brillante para acentos */
+            --azul-claro: #f0f8ff;     /* Un fondo azul muy pálido (casi blanco) */
+            --blanco: #ffffff;
+            --texto-oscuro: #333333;
+            --texto-claro: #5f6c7b;
+            --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            
+            margin: 0;
+            background-color: var(--azul-claro);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        
+        /* --- Sección Hero (Principal) --- */
+        .hero {
+            background: linear-gradient(135deg, var(--azul-principal), var(--azul-secundario));
+            color: var(--blanco);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0 0 15px 0;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* --- Secciones de Contenido --- */
+        .content-section {
+            padding: 60px 0;
+        }
+
+        .content-section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: var(--azul-principal);
+            margin-bottom: 40px;
+        }
+
+        /* --- Misión y Visión --- */
+        .mision-vision {
+            display: flex;
+            gap: 40px;
+            background-color: var(--blanco);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--sombra-suave);
+        }
+
+        .mision-vision div {
+            flex: 1;
+        }
+
+        .mision-vision h3 {
+            font-size: 24px;
+            color: var(--azul-secundario);
+            border-bottom: 2px solid var(--azul-secundario);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* --- Sección de Equipo --- */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .team-card {
+            background-color: var(--blanco);
+            border-radius: 12px;
+            box-shadow: var(--sombra-suave);
+            text-align: center;
+            padding: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .team-card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px solid var(--azul-secundario);
+            margin-bottom: 20px;
+            object-fit: cover;
+            background-color: #eee; /* Color de fondo para placeholder */
+        }
+
+        .team-card h4 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--azul-principal);
+            margin: 0 0 5px 0;
+        }
+
+        .team-card p {
+            font-size: 16px;
+            color: var(--texto-claro);
+            margin: 0;
+        }

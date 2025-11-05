@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificaciones | CertiPro</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/imagenes.css">
+
+    <link rel="icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+
+    <header id="header">
+
+    </header>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal"></div>
+
+    <header class="hero">
+        <h1>Certificaciones Disponibles</h1>
+        <p>Selecciona una certificación y genera tu examen.</p>
+    </header>
+
+<section class="certificaciones">
+
+    <!-- Certificación Activa -->
+    <div class="card">
+        <h3>Certificación en Ensamblador</h3>
+        <p>Aprende el lenguaje ensamblador y domina la programación a bajo nivel.</p>
+        <img src="/FRONT/media/ensamblador.png" alt="Ensamblador" class="cert-img">
+        <p>Ventajas: Comprende cómo funciona el hardware desde dentro y optimiza tus programas al máximo.</p>
+        <p>Puntuación mínima: 75%</p>
+        <p>Tiempo: 90 minutos</p>
+        <p>Costo: $650</p>
+        <button class="pay-btn activa" data-cert="Ensamblador" id="pago">Pagar</button>
+        <button class="start-btn activa" data-cert="Ensamblador" id="examen">Iniciar examen</button>
+    </div>
+
+    <!-- Certificación No Activa -->
+    <div class="card">
+        <h3>Certificación en Python</h3>
+        <p>Aprende Python, el lenguaje ideal para ciencia de datos y automatización.</p>
+        <img src="/FRONT/media/python.png" alt="Python" class="cert-img">
+        <p>Ventajas: Conviértete en un programador versátil y capaz de crear scripts y análisis de datos.</p>
+        <p>Puntuación mínima: 75%</p>
+        <p>Tiempo: 90 minutos</p>
+        <p>Costo: $600</p>
+        <button class="pay-btn noActiva" data-cert="Python" >Pagar</button>
+        <button class="start-btn noActiva" data-cert="Python" >Iniciar examen</button>
+        <p class="coming-soon">Disponible a partir del 15 de noviembre de 2025</p>
+    </div>
+
+    <!-- Certificación No Activa -->
+    <div class="card">
+        <h3>Certificación en Java</h3>
+        <p>Aprende Java, ampliamente usado en aplicaciones empresariales y móviles.</p>
+        <img src="/FRONT/media/java.png" alt="Java" class="cert-img">
+        <p>Ventajas: Desarrolla aplicaciones robustas y multiplataforma, muy valoradas en el mercado.</p>
+        <p>Puntuación mínima: 80%</p>
+        <p>Tiempo: 120 minutos</p>
+        <p>Costo: $800</p>
+        <button class="pay-btn noActiva" data-cert="Java" >Pagar</button>
+        <button class="start-btn noActiva" data-cert="Java" >Iniciar examen</button>
+        <p class="coming-soon">Disponible a partir del 1 de diciembre de 2025</p>
+    </div>
+
+    <!-- Certificación No Activa -->
+    <div class="card">
+        <h3>Certificación en C#</h3>
+        <p>Aprende C#, el lenguaje principal para desarrollo de aplicaciones Windows y videojuegos.</p>
+        <img src="/FRONT/media/Csharp_Logo.png" alt="C#" class="cert-img">
+        <p>Ventajas: Crea software profesional y juegos usando herramientas modernas como Unity.</p>
+        <p>Puntuación mínima: 70%</p>
+        <p>Tiempo: 75 minutos</p>
+        <p>Costo: $700</p>
+        <button class="pay-btn noActiva" data-cert="C#" >Pagar</button>
+        <button class="start-btn noActiva" data-cert="C#" >Iniciar examen</button>
+        <p class="coming-soon">Disponible a partir del 20 de noviembre de 2025</p>
+    </div>
+
+</section>
+
+    <footer id="footer"></footer>
+
+
+
+    <script type="module" src="../js/header-footer.js" defer></script>
+    <script src="../js/certificaciones.js"></script>
+</body>
+</html>

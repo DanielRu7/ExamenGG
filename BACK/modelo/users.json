@@ -1,0 +1,8 @@
+[
+  { "cuenta": "gina",     "contrasena": "1234",        "nombre": "Gerogina Salazar Partida" },
+  { "cuenta": "sofia",    "contrasena": "abcd",        "nombre": "Sofía Martínez López" },
+  { "cuenta": "karla",    "contrasena": "pass1",       "nombre": "Karla Ramírez Ocampo" },
+  { "cuenta": "luis",     "contrasena": "secreto",     "nombre": "Luis Alberto Navarro Ruiz" },
+  { "cuenta": "andrea",   "contrasena": "qwerty",      "nombre": "Andrea Fernanda Chávez" },
+  { "cuenta": "prof_uaa", "contrasena": "angular17",   "nombre": "Dr. Héctor Álvarez Ugalde" }
+]

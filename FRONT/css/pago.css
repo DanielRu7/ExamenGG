@@ -1,0 +1,53 @@
+.seccion{
+    /* background-color: red; */
+    padding: 50px;    
+
+    margin: 50px auto;
+    display: flex;
+    
+    
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgb(219, 217, 217);
+}
+
+.seccion h2{
+    text-align: center;
+}
+
+.modulo{
+    display: flex;
+    
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modulo input{
+    text-indent: 10px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid rgb(165, 165, 165);
+}
+
+.peque{
+    display: flex;
+    
+    justify-content: space-between;
+    
+}
+
+#pago{
+    font-weight: bold;
+    font-size: medium;
+    color: aliceblue;
+    background-color: rgb(7, 7, 172);
+    height: 40px;
+
+}
+#pago:hover{
+    transition: 1.0s;
+    background-color:  rgb(19, 19, 210);
+}

@@ -1,0 +1,587 @@
+/* --- Globales y Cuerpo --- */
+html, body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background-color: #F3F4F6;
+    color: #374151;
+}
+
+/* --- Barra de Navegación (Navbar) --- */
+nav {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    gap: 2rem; /* separa los elementos para que respiren */
+}
+
+/* Logo en el Navbar */
+nav img.logo {
+    height: 40px;      
+    width: auto;        
+    border-radius: 6px; 
+    vertical-align: middle; 
+    transition: transform 0.2s ease;
+}
+nav img.logo:hover{
+    transform: scale(1.04);
+}
+
+/* Enlaces de Navegación  */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 0;
+    flex: 2; /* espacio central más grande */
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Efecto de línea al pasar el mouse */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F3F4F6;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #F3F4F6;
+}
+.nav-links a.activo {
+    color: #F3F4F6; 
+    font-weight: 600;
+}
+
+.nav-links a.activo::after {
+    width: 100%;
+    background-color: #F3F4F6;
+}
+
+/* Controles de Usuario (Login/Logout) */
+.user-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio entre el nombre y los botones */
+}
+
+#userName {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+#loginBtn {
+    background-color: #3B82F6; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.3s ease;
+}
+#loginBtn:hover {
+    background-color: #2563EB; 
+}
+
+nav .logout {
+    background-color: #F87171;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+nav .logout:hover {
+    background-color: #DC2626;
+}
+
+/* --- Sección Hero --- */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Sección de Certificaciones (Tarjetas) --- */
+.certificaciones {
+    flex: 1; /* Ocupa el espacio disponible */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h3 {
+    color: #1E3A8A;
+}
+
+.card button {
+    margin-top: 1rem;
+    background: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover {
+    background: #2563EB;
+}
+/* --- Sección Cómo Funciona --- */
+.comoFunciona {
+    padding: 4rem 2rem;
+    background-color: #F3F4F6;
+    text-align: center;
+}
+
+.comoFunciona h2 {
+    color: #1E3A8A;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pasosContenedor {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.paso {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex: 1 1 220px;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.paso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.pasoNumero{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 1rem;
+}
+
+.paso h3 {
+    color: #1E3A8A;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.paso p {
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+
+/* --- Modal de Login --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 0.6rem;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    width: 95%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #1E3A8A;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #3B82F6;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* --- Footer  --- */
+footer {
+    background-color: #1E3A8A;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre texto y redes */
+    flex-wrap: wrap; /* Para que en pantallas pequeñas se acomode abajo */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #FFD700;
+    transform: scale(1.15);
+}
+
+
+
+/* --- Contacto --- */
+
+        .contact-section {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinea el formulario arriba */
+        }
+
+        .contact-container {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem 2.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 700px; /* Le damos un buen ancho */
+            box-sizing: border-box;
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            color: #1E3A8A;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Estilos para el formulario */
+        #contactForm label {
+            display: block; /* Cada label en su línea */
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #374151;
+            text-align: left;
+        }
+
+        #contactForm input,
+        #contactForm textarea {
+            width: 100%; /* Ocupa todo el ancho */
+            box-sizing: border-box; /* Para que el padding no rompa el ancho */
+            padding: 0.8rem;
+            margin-bottom: 1.25rem;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.95rem;
+        }
+
+        #contactForm textarea {
+            resize: vertical; /* Permite al usuario ajustar la altura */
+            min-height: 120px;
+        }
+
+        #contactForm button {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #1E3A8A;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        #contactForm button:hover {
+            background-color: #3B82F6;
+        }
+
+/* --- Hero principal con fondo bonito --- */
+.hero-index {
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
+    color: white;
+    padding: 5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content span {
+    color: #FFD700;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #FFD700;
+    color: #1E3A8A;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #FACC15;
+    transform: scale(1.05);
+}
+
+/* --- Sección de beneficios --- */
+.benefits {
+    padding: 4rem 2rem;
+    background-color: #F3F4F6;
+    text-align: center;
+}
+
+.benefits h2 {
+    color: #1E3A8A;
+    margin-bottom: 2rem;
+}
+
+.benefit-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.benefit {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+}
+
+.benefit img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.benefit h3 {
+    color: #1E3A8A;
+    margin-bottom: 0.5rem;
+}
+    /* --- Imágenes principales del index --- */
+.imgPrincipal {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;          
+    width: 500px;           
+    height: auto;            
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;       /* Asegura que la imagen se recorte bien */
+}
+
+
+/* --- Si hay varias imágenes, que se acomoden bien --- */
+.imagenes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+
+/* estilos propios DD */
+
+.ocultar{
+    font-size: medium;
+    font-weight: bolder;
+    background: none;
+    border: 0;
+    color: #ffffff;
+}
+
+.ocultar:hover{
+    color: #81d4fa;
+    transition: 0.9s;
+}
+.logo-carousel {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.logo-carousel h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #1E3A8A;
+}
+
+.slider {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.slide {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  height: 80px;
+  width: auto;
+  filter: grayscale(1);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.slide img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}

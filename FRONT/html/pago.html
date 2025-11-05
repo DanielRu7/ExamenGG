@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio | CertiPro</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/pago.css">
+
+    <link rel="icon" href="../media/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+</head>
+<body>
+    <header id="header">
+
+    </header>
+    <div id="loginModal" class="modal"></div>
+
+    <form class="seccion">
+        <h2>
+            Metodo de Pago
+        </h2>
+        <div class="modulo">
+            <label for="">Nombre del Titular</label>
+            <input type="text" placeholder="Nombre Completo" required>
+        </div>
+        <div class="modulo">
+            <label for="">Numero de tarjeta</label>
+            <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+        </div>
+        <div class="peque">
+
+            <div class="modulo">
+            <label for="">CCV</label>
+            <input type="text" placeholder="xxx" required>
+        </div>
+        <div class="modulo">
+            <label for="">Fecha de Caducidad</label>
+            <input type="text" placeholder="xx/xx" required>
+        </div>
+            
+        </div>
+        
+        <div class="modulo">
+            <button id="pago" type="submit">Enviar</button>
+        </div>
+        
+        
+    </form>
+
+
+
+    <footer id="footer">
+
+    </footer>
+    
+
+    <script type="module" src="../js/header-footer.js" defer></script>
+    <script src="../js/pago.js" defer></script>
+</body>
+</html>

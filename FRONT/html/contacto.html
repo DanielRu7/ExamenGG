@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos | CertiPro</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    
+
+    <link rel="icon" href="../media/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+
+
+</head>
+<body>
+
+    <header id="header">
+
+    </header>
+
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal"></div>
+
+    <main>
+        <header class="hero">
+            <h1>Contáctanos</h1>
+            <p>¿Tienes dudas o sugerencias? Nos encantaría escucharte.</p>
+        </header>
+
+        <section class="contact-section">
+            <div class="contact-container">
+                <h2>Envíanos un mensaje</h2>
+                <form id="contactForm">
+                    
+                    <label for="contact-name">Nombre</label>
+                    <input type="text" id="contact-name" placeholder="Tu nombre completo" required>
+                    
+                    <label for="contact-email">Correo Electrónico</label>
+                    <input type="email" id="contact-email" placeholder="tu.correo@ejemplo.com" required>
+                    
+                    <label for="contact-subject">Asunto</label>
+                    <input type="text" id="contact-subject" placeholder="Ej: Duda sobre certificación Web" required>
+                    
+                    <label for="contact-message">Mensaje</label>
+                    <textarea id="contact-message" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    
+                    <button type="submit" id="enviar">Enviar Mensaje</button>
+                
+                </form>
+            </div>
+        </section>
+    </main>
+<footer id="footer">
+    
+</footer>
+     <script type="module" src="../js/header-footer.js" defer></script>
+     <script src="../js/comentarios.js" defer></script>
+     
+
+</body>
+</html>
